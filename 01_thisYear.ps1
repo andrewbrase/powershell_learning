@@ -1,4 +1,6 @@
-﻿$dateTime = get-date
+﻿<#created with the powershell ISE#>
+
+$dateTime = get-date
 $thisYear = $dateTime.Year
 write-host "The year is $thisYear!"
 
