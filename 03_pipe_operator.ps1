@@ -38,4 +38,16 @@ __________________________________________________________________
 PS C:\windows\system32> get-process CalculatorApp | Stop-Process
 you can use get-process {app} | stop-process to end a program
 
+__________________________________________________________________
+get-module - find imported modules
+import-module
+Find-Module -tag test
+
+PS C:\windows\system32> get-help import-module
+
+NAME
+    Import-Module
+
+SYNOPSIS
+    Adds modules to the current session.
 #>
