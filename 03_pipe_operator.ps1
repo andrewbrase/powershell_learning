@@ -51,3 +51,26 @@ NAME
 SYNOPSIS
     Adds modules to the current session.
 #>
+
+<#
+get-process notepad | stop-process
+get-help Stop-Process -full
+__________________________________________________________________
+__________________________________________________________________
+
+get-process | ForEach-Object {$psitem}
+- get all processes and for each process return the current object psitem
+
+PS C:\Users\brasea> 1,2,3,4,5,6,7,8,9,10 | foreach-object {$psitem}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+PS C:\Users\brasea>
+#>
