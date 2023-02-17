@@ -387,36 +387,16 @@ Length Name                                     CreationTime
 __________________________________________________________________
 __________________________________________________________________
 
-PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem -path 'C:\Users\brasea\desktop\apps' | Sort-Object length | Format-table name,length,LastAccessTime
-
-Name                             Length LastAccessTime
-----                             ------ --------------
-Brother support website.url         204 2/14/2023 8:58:24 AM
-Wallpaper Engine.url                222 2/14/2023 8:58:24 AM
-Notepad++.lnk                       872 2/16/2023 10:14:16 AM
-PuTTY.lnk                          1026 2/16/2023 10:14:16 AM
-Steam.lnk                          1043 2/16/2023 10:14:16 AM
-Minecraft Launcher.lnk             1110 2/16/2023 10:14:16 AM
-WinSCP.lnk                         1141 2/16/2023 10:14:16 AM
-Webex.lnk                          1147 2/16/2023 10:14:16 AM
-Firefox.lnk                        1151 2/16/2023 10:14:16 AM
-Oracle VM VirtualBox.lnk           1156 2/16/2023 10:14:16 AM
-VMware Workstation 16 Player.lnk   1268 2/16/2023 10:14:16 AM
-Adobe Creative Cloud.lnk           1363 2/16/2023 10:14:16 AM
-Visual Studio Code.lnk             1414 2/16/2023 10:14:16 AM
-Spotify.lnk                        1862 2/16/2023 10:14:16 AM
-Cisco AnyConnect VPN Client.lnk    1934 2/16/2023 10:14:16 AM
-P-touch Editor 5.4.lnk             1951 2/16/2023 10:14:16 AM
-VMware Horizon Client.lnk          2065 2/16/2023 10:14:16 AM
-P-touch Update Software.lnk        2070 2/16/2023 10:14:16 AM
-Acrobat Reader.lnk                 2131 2/16/2023 10:14:16 AM
-Atom.lnk                           2199 2/16/2023 10:14:16 AM
-Microsoft Edge.lnk                 2283 2/16/2023 10:14:16 AM
-Microsoft Teams.lnk                2372 2/16/2023 10:14:16 AM
-download.png                       5461 7/11/2022 6:45:20 AM
-Brother Common Installer                2/16/2023 10:14:16 AM
-Brother Manuals                         2/16/2023 10:14:16 AM
+PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem | Where-Object {$_.Length -lt 1mb}
 
 
+    Directory: C:\Users\brasea\Desktop\txt_notes
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          2/8/2023  10:15 AM           7272 ai.txt
+-a----         1/17/2023   9:24 PM           6844 django.txt
+-a----         2/16/2023  12:00 PM          28900 flashcards.txt
 
 #>
