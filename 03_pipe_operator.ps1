@@ -166,6 +166,8 @@ PS C:\Users\brasea>
 __________________________________________________________________
 
 the format-list * gets all data in the form of a list from each obj 
+to see all available properties
+
 PS C:\Users\brasea> Get-Process *vmware* | format-list *
 
 
