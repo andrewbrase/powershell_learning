@@ -81,11 +81,6 @@ is
 a
 test
 
-
-
-
-
-
 FORMATTING 
 __________________________________________________________________
 PS C:\Users\brasea> get-date | format-table
@@ -100,7 +95,6 @@ PS C:\Users\brasea>
 
 __________________________________________________________________
 PS C:\Users\brasea> get-date | format-list
-
 
 DisplayHint : DateTime
 Date        : 2/16/2023 12:00:00 AM
@@ -118,12 +112,7 @@ TimeOfDay   : 20:22:16.5537414
 Year        : 2023
 DateTime    : Thursday, February 16, 2023 8:22:16 PM
 
-
-
 PS C:\Users\brasea>
-
-
-
 
 PS C:\Users\brasea> get-command *network* | Format-Table
 
@@ -165,6 +154,19 @@ Function        Set-PcsvDeviceNetworkConfiguration                 1.0.0.0    Pc
 Function        Set-VpnConnectionTriggerTrustedNetwork             2.0.0.0    VpnClient
 Application     gatherNetworkInfo.vbs                              0.0.0.0    C:\windows\system32\gatherNetworkInfo.vbs
 
-
+__________________________________________________________________
 PS C:\Users\brasea>
+PS C:\Users\brasea> Get-Process *vmware* | foreach-object {$_.processname} | Sort-Object
+vagrant-vmware-utility
+vmware-authd
+VMwareHubHealthMonitoring
+vmware-usbarbitrator64
+PS C:\Users\brasea>
+
+
+
+
+
+
+
 #>
