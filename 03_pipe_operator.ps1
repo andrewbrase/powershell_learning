@@ -273,4 +273,18 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 
 
 
+
+
+
+!!!
+
+PS C:\Users\brasea> get-process | Where-Object {$_.CPU -gt 100}
+- get all processes where the CPU usage is greater than 100
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+   1018      47   312828     314812     242.84   2980   1 chrome
+    463      71   172216     235944     256.30  20544   1 chrome
+    441      22   152744     192512     133.55  21444   1 Code
+
 #>
