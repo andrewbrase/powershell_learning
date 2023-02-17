@@ -1,0 +1,9 @@
+Comparison Operators 
+-eq (equal to)
+-ne (not equal to)
+-gt (greater than)
+-lt (less than)
+-le (less than or equal to)
+-ge (greater than or equal to)
+-like and -notLike (matching wildcards), not to be confused with the -contains operator.
+-match and -notMatch (Matching with regular expressions)
