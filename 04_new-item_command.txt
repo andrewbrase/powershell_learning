@@ -1,0 +1,16 @@
+PS C:\Users\brasea\Desktop\txt_notes> new-item -path "C:\Users\brasea\Desktop\Workspace\powershell\" -name "04_new-item_command.txt" -value "This file was created with powershell using new-tem -path '{file path}' -name '{name.txt}' -value '{text}'"
+
+
+    Directory: C:\Users\brasea\Desktop\Workspace\powershell
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         2/17/2023   7:24 AM            106 04_new-item_command.txt
+
+
+PS C:\Users\brasea\Desktop\txt_notes>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This file was created with powershell using new-tem -path '{file path}' -name '{name.txt}' -value '{text}'
