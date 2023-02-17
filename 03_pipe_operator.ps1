@@ -239,4 +239,38 @@ WorkingSet64               : 10891264
 Site                       :
 Container                  :
 
+
+
+
+PS C:\Users\brasea> get-process *vmware* | select-object Name,ID,responding
+
+Name                        Id Responding
+----                        -- ----------
+vagrant-vmware-utility    7492       True
+vmware-authd              7484       True
+VMwareHubHealthMonitoring 7720       True
+vmware-usbarbitrator64    7568       True
+
+
+PS C:\Users\brasea>
+__________________________________________________________________
+
+PS C:\Users\brasea> get-process | Sort-Object cpu
+- looks for which processes are using the most cpu ex.
+
+
+PS C:\Users\brasea> get-process | Sort-Object cpu
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    510      31    52948      50180      50.14  15492   1 msedgewebview2
+   2299      82    73740     154456      53.80  14020   1 explorer
+    659      45   266320      23944      65.53   3232   1 Creative Cloud UI Helper
+   1628      71   100692     181084      72.47  18360   1 chrome
+    444      22   148220     187200     121.38  21444   1 Code
+   1007      44   148648     151700     216.03   2980   1 chrome
+    463      70   169168     233324     225.70  20544   1 chrome
+
+
+
 #>
