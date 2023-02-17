@@ -163,10 +163,78 @@ VMwareHubHealthMonitoring
 vmware-usbarbitrator64
 PS C:\Users\brasea>
 
+__________________________________________________________________
+
+the format-list * gets all data in the form of a list from each obj 
+PS C:\Users\brasea> Get-Process *vmware* | format-list *
 
 
-
-
-
+Name                       : vagrant-vmware-utility
+Id                         : 7492
+PriorityClass              :
+FileVersion                :
+HandleCount                : 118
+WorkingSet                 : 10891264
+PagedMemorySize            : 14987264
+PrivateMemorySize          : 14987264
+VirtualMemorySize          : 715128832
+TotalProcessorTime         :
+SI                         : 0
+Handles                    : 118
+VM                         : 5010096128
+WS                         : 10891264
+PM                         : 14987264
+NPM                        : 9928
+Path                       :
+Company                    :
+CPU                        :
+ProductVersion             :
+Description                :
+Product                    :
+__NounName                 : Process
+BasePriority               : 8
+ExitCode                   :
+HasExited                  :
+ExitTime                   :
+Handle                     :
+SafeHandle                 :
+MachineName                : .
+MainWindowHandle           : 0
+MainWindowTitle            :
+MainModule                 :
+MaxWorkingSet              :
+MinWorkingSet              :
+Modules                    :
+NonpagedSystemMemorySize   : 9928
+NonpagedSystemMemorySize64 : 9928
+PagedMemorySize64          : 14987264
+PagedSystemMemorySize      : 66208
+PagedSystemMemorySize64    : 66208
+PeakPagedMemorySize        : 14987264
+PeakPagedMemorySize64      : 14987264
+PeakWorkingSet             : 11104256
+PeakWorkingSet64           : 11104256
+PeakVirtualMemorySize      : 719060992
+PeakVirtualMemorySize64    : 5014028288
+PriorityBoostEnabled       :
+PrivateMemorySize64        : 14987264
+PrivilegedProcessorTime    :
+ProcessName                : vagrant-vmware-utility
+ProcessorAffinity          :
+Responding                 : True
+SessionId                  : 0
+StartInfo                  : System.Diagnostics.ProcessStartInfo
+StartTime                  :
+SynchronizingObject        :
+Threads                    : {7496, 7688, 7692, 7696...}
+UserProcessorTime          :
+VirtualMemorySize64        : 5010096128
+EnableRaisingEvents        : False
+StandardInput              :
+StandardOutput             :
+StandardError              :
+WorkingSet64               : 10891264
+Site                       :
+Container                  :
 
 #>
