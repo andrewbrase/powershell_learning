@@ -287,4 +287,100 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
     463      71   172216     235944     256.30  20544   1 chrome
     441      22   152744     192512     133.55  21444   1 Code
 
+__________________________________________________________________
+
+PS C:\Users\brasea> get-process | Where-Object {$_.id -lt 1000} | Sort-Object id
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+      0       0       60          8                 0   0 Idle
+   5795       0      208       4120                 4   0 System
+      0      14    17632      89800               124   0 Registry
+     53       4     1076       1248               648   0 smss
+    165      11     1440       7240               672   0 wininit
+    885      32     2828       6308               676   1 csrss
+    430      19     7016      16848               700   0 svchost
+   1078      17     8352      19228               864   0 services
+   1082      35     2588       6464               960   0 csrss
+
+
+#>
+
+
+<#
+
+PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem -path $home
+-lists all files in home
+
+
+PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem -path C:\Users\brasea\Desktop\ | Format-list
+
+PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem -path 'C:\Users\brasea\Desktop\Workspace\python_learning\d5_data_structures&alg\'
+
+
+
+
+PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem -path 'C:\Users\brasea\Desktop\Workspace\python_learning\d5_data_structures&alg\' | sort-object length | format-table length,name,CreationTime
+
+Length Name                                     CreationTime
+------ ----                                     ------------
+     7 .gitignore                               12/22/2022 12:06:29 PM
+   343 36_hash_tables.ipynb                     2/1/2023 2:20:03 PM
+   659 03_Amortization.txt                      12/28/2022 3:57:35 PM
+  1259 19_doubly_linked_lists.txt               1/5/2023 3:49:15 PM
+  1408 scratchbook.ipynb                        2/3/2023 4:26:51 PM
+  1518 22_recursion.txt                         1/9/2023 7:31:43 PM
+  1801 07_largest_continous_sum.ipynb           12/31/2022 11:22:31 AM
+  1914 10_unique_characters_problem.ipynb       1/1/2023 6:33:52 PM
+  2063 12_stack.ipynb                           1/1/2023 7:07:18 PM
+  2069 29_CICD.txt                              1/24/2023 9:42:11 AM
+  2119 17_balance_check.ipynb                   1/4/2023 1:14:39 PM
+  2271 13_queue.ipynb                           1/1/2023 7:32:25 PM
+  2294 11_stacks_queues_deques.txt              1/1/2023 6:56:16 PM
+  2347 04_Anagram_problem.ipynb                 12/28/2022 4:26:38 PM
+  2406 02_dynamic_arr.py                        12/27/2022 7:09:58 AM
+  2731 15_Deque.ipynb                           1/2/2023 7:13:08 PM
+  2906 34_sorting_alg_details.txt               1/30/2023 8:41:21 PM
+  2977 20_Linked_List_Nth_to_Last_Node.ipynb    1/6/2023 11:22:05 AM
+  3070 28_sorting_alg.ipynb                     1/25/2023 11:21:04 AM
+  3113 05_Array_pair_sum.ipynb                  12/28/2022 8:59:55 PM
+  3175 32_insertion_sort.ipynb                  1/28/2023 8:31:16 PM
+  3178 09_word_compress.ipynb                   12/31/2022 4:25:53 PM
+  3391 14_stack_vs_queue.ipynb                  1/2/2023 6:56:33 PM
+  3761 23_models_and_more.txt                   1/18/2023 10:27:39 AM
+  3780 23_Memoization-study.ipynb               1/17/2023 9:54:14 PM
+  3937 30_bubble_sort.ipynb                     1/26/2023 7:03:50 PM
+  4010 08_sentence_rev.ipynb                    12/31/2022 11:44:35 AM
+  4337 31_selection_sort.ipynb                  1/26/2023 8:16:53 PM
+  4734 16_implementation.ipynb                  1/3/2023 8:01:43 AM
+  5124 06_Missing_element_problem.ipynb         12/28/2022 9:30:19 PM
+  5255 22_recursion_factorial.jpg               1/9/2023 8:00:22 PM
+  5801 33_shell_sort.ipynb                      1/30/2023 7:48:32 PM
+  5935 26_binary_search_trees.ipynb             1/22/2023 1:11:21 PM
+  6442 21_practice.ipynb                        1/9/2023 2:06:37 PM
+  6839 35_merge_sort.ipynb                      1/30/2023 8:50:12 PM
+  9083 38_graphs.ipynb                          2/3/2023 7:09:13 AM
+ 10198 23_memoization.ipynb                     1/12/2023 8:36:02 PM
+ 10640 18_linked_lists.ipynb                    1/5/2023 2:25:29 PM
+ 10675 37_quick_sort.ipynb                      2/1/2023 9:24:35 PM
+ 12442 24_binary_tress.ipynb                    1/18/2023 12:24:05 PM
+ 12572 25_priority_queues_w_binary_healps.ipynb 1/20/2023 10:34:10 AM
+ 14317 23_practice.ipynb                        1/17/2023 12:17:40 PM
+ 14570 01_data_structures&alg.py                12/21/2022 1:57:07 PM
+ 22973 27_search.ipynb                          1/25/2023 11:15:59 AM
+ 30036 22_recursive_functions.ipynb             1/9/2023 7:47:50 PM
+ 81842 37_quick_sort.JPG                        2/2/2023 9:27:39 AM
+103632 26_binary_search_tree.JPG                1/22/2023 1:29:40 PM
+124606 35_merge_sort.JPG                        2/1/2023 1:53:29 PM
+141918 25_insert_heap.JPG                       1/20/2023 11:30:16 AM
+153867 01_big-o_chart.ipynb                     12/22/2022 11:58:36 AM
+481276 38_graphs.jpg                            2/3/2023 7:30:36 AM
+587396 03_Amortization_01.jpg                   12/28/2022 4:23:03 PM
+664852 03_Amortization.jpg                      12/28/2022 4:11:01 PM
+699680 38_adjacency_matrix.jpg                  2/3/2023 8:46:45 AM
+767442 38_adjacency_list.jpg                    2/3/2023 8:59:58 AM
+861584 30_bubble_sort.jpg                       1/26/2023 7:15:00 PM
+910849 31_selection_sort.jpg                    1/26/2023 8:22:26 PM
+       DSAvenv                                  12/22/2022 12:01:31 PM
+       extra                                    12/22/2022 11:59:39 AM
 #>
