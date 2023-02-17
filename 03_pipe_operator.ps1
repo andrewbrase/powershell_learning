@@ -73,4 +73,98 @@ PS C:\Users\brasea> 1,2,3,4,5,6,7,8,9,10 | foreach-object {$psitem}
 9
 10
 PS C:\Users\brasea>
+
+A shorthand way of writing PSITEM is $_
+PS C:\Users\brasea> "this","is","a","test" | ForEach-Object {$_}
+this
+is
+a
+test
+
+
+
+
+
+
+FORMATTING 
+__________________________________________________________________
+PS C:\Users\brasea> get-date | format-table
+
+DisplayHint Date                  Day DayOfWeek DayOfYear Hour  Kind Millisecond Minute Mont
+                                                                                           h
+----------- ----                  --- --------- --------- ----  ---- ----------- ------ ----
+   DateTime 2/16/2023 12:00:00 AM  16  Thursday        47   20 Local         866     21    2
+
+
+PS C:\Users\brasea>
+
+__________________________________________________________________
+PS C:\Users\brasea> get-date | format-list
+
+
+DisplayHint : DateTime
+Date        : 2/16/2023 12:00:00 AM
+Day         : 16
+DayOfWeek   : Thursday
+DayOfYear   : 47
+Hour        : 20
+Kind        : Local
+Millisecond : 553
+Minute      : 22
+Month       : 2
+Second      : 16
+Ticks       : 638121757365537414
+TimeOfDay   : 20:22:16.5537414
+Year        : 2023
+DateTime    : Thursday, February 16, 2023 8:22:16 PM
+
+
+
+PS C:\Users\brasea>
+
+
+
+
+PS C:\Users\brasea> get-command *network* | Format-Table
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Add-NetEventNetworkAdapter                         1.0.0.0    NetEventPacketCapture
+Function        Add-NetEventVmNetworkAdapter                       1.0.0.0    NetEventPacketCapture
+Function        Add-VpnConnectionTriggerTrustedNetwork             2.0.0.0    VpnClient
+Function        Disable-NetworkSwitchEthernetPort                  1.0.0.0    NetworkSwitchManager
+Function        Disable-NetworkSwitchFeature                       1.0.0.0    NetworkSwitchManager
+Function        Disable-NetworkSwitchVlan                          1.0.0.0    NetworkSwitchManager
+Function        Enable-NetworkSwitchEthernetPort                   1.0.0.0    NetworkSwitchManager
+Function        Enable-NetworkSwitchFeature                        1.0.0.0    NetworkSwitchManager
+Function        Enable-NetworkSwitchVlan                           1.0.0.0    NetworkSwitchManager
+Function        Get-BCNetworkConfiguration                         1.0.0.0    BranchCache
+Function        Get-DtcNetworkSetting                              1.0.0.0    MsDtc
+Function        Get-NetEventNetworkAdapter                         1.0.0.0    NetEventPacketCapture
+Function        Get-NetEventVmNetworkAdapter                       1.0.0.0    NetEventPacketCapture
+Function        Get-NetworkSwitchEthernetPort                      1.0.0.0    NetworkSwitchManager
+Function        Get-NetworkSwitchFeature                           1.0.0.0    NetworkSwitchManager
+Function        Get-NetworkSwitchGlobalData                        1.0.0.0    NetworkSwitchManager
+Function        Get-NetworkSwitchVlan                              1.0.0.0    NetworkSwitchManager
+Function        Get-SmbClientNetworkInterface                      2.0.0.0    SmbShare
+Function        Get-SmbServerNetworkInterface                      2.0.0.0    SmbShare
+Function        New-NetworkSwitchVlan                              1.0.0.0    NetworkSwitchManager
+Function        Remove-NetEventNetworkAdapter                      1.0.0.0    NetEventPacketCapture
+Function        Remove-NetEventVmNetworkAdapter                    1.0.0.0    NetEventPacketCapture
+Function        Remove-NetworkSwitchEthernetPortIPAddress          1.0.0.0    NetworkSwitchManager
+Function        Remove-NetworkSwitchVlan                           1.0.0.0    NetworkSwitchManager
+Function        Remove-VpnConnectionTriggerTrustedNetwork          2.0.0.0    VpnClient
+Function        Restore-NetworkSwitchConfiguration                 1.0.0.0    NetworkSwitchManager
+Function        Save-NetworkSwitchConfiguration                    1.0.0.0    NetworkSwitchManager
+Function        Set-DtcNetworkSetting                              1.0.0.0    MsDtc
+Function        Set-NetworkSwitchEthernetPortIPAddress             1.0.0.0    NetworkSwitchManager
+Function        Set-NetworkSwitchPortMode                          1.0.0.0    NetworkSwitchManager
+Function        Set-NetworkSwitchPortProperty                      1.0.0.0    NetworkSwitchManager
+Function        Set-NetworkSwitchVlanProperty                      1.0.0.0    NetworkSwitchManager
+Function        Set-PcsvDeviceNetworkConfiguration                 1.0.0.0    PcsvDevice
+Function        Set-VpnConnectionTriggerTrustedNetwork             2.0.0.0    VpnClient
+Application     gatherNetworkInfo.vbs                              0.0.0.0    C:\windows\system32\gatherNetworkInfo.vbs
+
+
+PS C:\Users\brasea>
 #>
