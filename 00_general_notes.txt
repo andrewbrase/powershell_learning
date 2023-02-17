@@ -7,7 +7,7 @@ Comparison Operators
 -ge (greater than or equal to)
 -like and -notLike (matching wildcards), not to be confused with the -contains operator.
 -match and -notMatch (Matching with regular expressions)
-
+_____________________________________________________________________________________________________________________________________________________
 PS C:\Users\brasea\Desktop\Workspace\powershell> get-command *get* | Where-Object {$_.CommandType -eq "Cmdlet"}
 
 CommandType     Name                                               Version    Source
@@ -156,7 +156,7 @@ Cmdlet          Get-WinUserLanguageList                            2.0.0.0    In
 Cmdlet          Get-WmiObject                                      3.1.0.0    Microsoft.PowerShell.Management
 Cmdlet          Get-WSManCredSSP                                   3.0.0.0    Microsoft.WSMan.Management
 Cmdlet          Get-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-
+_____________________________________________________________________________________________________________________________________________________
 PS C:\Users\brasea\Desktop\Workspace\powershell> get-command *set* | Where-Object {$_.CommandType -eq "Cmdlet"}
 
 CommandType     Name                                               Version    Source
@@ -260,6 +260,152 @@ Cmdlet          Set-Date                                           3.1.0.0    Mi
 Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
 Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.PowerShell.Utility
 Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
+_____________________________________________________________________________________________________________________________________________________
+PS C:\Users\brasea\Desktop\Workspace\powershell> get-command *get* -CommandType cmdlet | Sort-Object Source | Format-Table name,source
 
-
-PS C:\Users\brasea\Desktop\Workspace\powershell>
+Name                                        Source
+----                                        ------
+Get-AppLockerPolicy                         AppLocker
+Get-AppLockerFileInformation                AppLocker
+Get-AppvClientConnectionGroup               AppvClient
+Get-AppvClientMode                          AppvClient
+Get-AppvClientPackage                       AppvClient
+Get-AppvPublishingServer                    AppvClient
+Get-AppvClientConfiguration                 AppvClient
+Get-AppvClientApplication                   AppvClient
+Get-AppvStatus                              AppvClient
+Get-AppxPackageManifest                     Appx
+Get-AppxPackage                             Appx
+Get-AppxDefaultVolume                       Appx
+Get-AppxVolume                              Appx
+Get-BitsTransfer                            BitsTransfer
+Get-CimAssociatedInstance                   CimCmdlets
+Get-CimSession                              CimCmdlets
+Get-CimInstance                             CimCmdlets
+Get-CimClass                                CimCmdlets
+Get-CIPolicy                                ConfigCI
+Get-SystemDriver                            ConfigCI
+Get-CIPolicyInfo                            ConfigCI
+Get-CIPolicyIdInfo                          ConfigCI
+Get-DeliveryOptimizationLog                 DeliveryOptimization
+Get-DeliveryOptimizationLogAnalysis         DeliveryOptimization
+Get-NonRemovableAppsPolicy                  Dism
+Get-WindowsPackage                          Dism
+Get-WindowsDriver                           Dism
+Get-WIMBootEntry                            Dism
+Get-WindowsCapability                       Dism
+Get-WindowsOptionalFeature                  Dism
+Get-WindowsImage                            Dism
+Get-WindowsEdition                          Dism
+Get-WindowsImageContent                     Dism
+Get-WindowsReservedStorageState             Dism
+Get-AppxProvisionedPackage                  Dism
+Get-WinLanguageBarOption                    International
+Get-WinHomeLocation                         International
+Get-WinSystemLocale                         International
+Get-WinUILanguageOverride                   International
+Get-WinCultureFromLanguageListOptOut        International
+Get-WinDefaultInputMethodOverride           International
+Get-WinUserLanguageList                     International
+Get-WinAcceptLanguageFromLanguageListOptOut International
+Get-KdsRootKey                              Kds
+Get-KdsConfiguration                        Kds
+Get-SystemPreferredUILanguage               LanguagePackManagement
+Get-InstalledLanguage                       LanguagePackManagement
+Get-History                                 Microsoft.PowerShell.Core
+Get-Job                                     Microsoft.PowerShell.Core
+Get-Module                                  Microsoft.PowerShell.Core
+Get-PSSessionConfiguration                  Microsoft.PowerShell.Core
+Get-PSSessionCapability                     Microsoft.PowerShell.Core
+Get-PSHostProcessInfo                       Microsoft.PowerShell.Core
+Get-PSSession                               Microsoft.PowerShell.Core
+Get-Help                                    Microsoft.PowerShell.Core
+Get-PSSnapin                                Microsoft.PowerShell.Core
+Get-Command                                 Microsoft.PowerShell.Core
+Get-Counter                                 Microsoft.PowerShell.Diagnostics
+Get-WinEvent                                Microsoft.PowerShell.Diagnostics
+Get-LocalGroup                              Microsoft.PowerShell.LocalAccounts
+Get-LocalUser                               Microsoft.PowerShell.LocalAccounts
+Get-LocalGroupMember                        Microsoft.PowerShell.LocalAccounts
+Get-Service                                 Microsoft.PowerShell.Management
+Get-PSProvider                              Microsoft.PowerShell.Management
+Get-Transaction                             Microsoft.PowerShell.Management
+Get-PSDrive                                 Microsoft.PowerShell.Management
+Get-Process                                 Microsoft.PowerShell.Management
+Get-TimeZone                                Microsoft.PowerShell.Management
+Get-ComputerRestorePoint                    Microsoft.PowerShell.Management
+Get-Content                                 Microsoft.PowerShell.Management
+Get-ControlPanelItem                        Microsoft.PowerShell.Management
+Get-ChildItem                               Microsoft.PowerShell.Management
+Get-Clipboard                               Microsoft.PowerShell.Management
+Get-ComputerInfo                            Microsoft.PowerShell.Management
+Get-WmiObject                               Microsoft.PowerShell.Management
+Get-ItemProperty                            Microsoft.PowerShell.Management
+Get-ItemPropertyValue                       Microsoft.PowerShell.Management
+Get-Location                                Microsoft.PowerShell.Management
+Get-EventLog                                Microsoft.PowerShell.Management
+Get-HotFix                                  Microsoft.PowerShell.Management
+Get-Item                                    Microsoft.PowerShell.Management
+Get-ExecutionPolicy                         Microsoft.PowerShell.Security
+Get-AuthenticodeSignature                   Microsoft.PowerShell.Security
+Get-PfxCertificate                          Microsoft.PowerShell.Security
+Get-Credential                              Microsoft.PowerShell.Security
+Get-CmsMessage                              Microsoft.PowerShell.Security
+Get-Acl                                     Microsoft.PowerShell.Security
+Get-Host                                    Microsoft.PowerShell.Utility
+Get-TraceSource                             Microsoft.PowerShell.Utility
+Get-FormatData                              Microsoft.PowerShell.Utility
+Get-Member                                  Microsoft.PowerShell.Utility
+Get-UICulture                               Microsoft.PowerShell.Utility
+Get-Unique                                  Microsoft.PowerShell.Utility
+Get-Variable                                Microsoft.PowerShell.Utility
+Get-TypeData                                Microsoft.PowerShell.Utility
+Get-EventSubscriber                         Microsoft.PowerShell.Utility
+Get-Alias                                   Microsoft.PowerShell.Utility
+Get-Culture                                 Microsoft.PowerShell.Utility
+Get-PSCallStack                             Microsoft.PowerShell.Utility
+Get-PSBreakpoint                            Microsoft.PowerShell.Utility
+Get-Random                                  Microsoft.PowerShell.Utility
+Get-Event                                   Microsoft.PowerShell.Utility
+Get-Date                                    Microsoft.PowerShell.Utility
+Get-Runspace                                Microsoft.PowerShell.Utility
+Get-RunspaceDebug                           Microsoft.PowerShell.Utility
+Get-WSManCredSSP                            Microsoft.WSMan.Management
+Get-WSManInstance                           Microsoft.WSMan.Management
+Get-DAPolicyChange                          NetSecurity
+Get-PackageProvider                         PackageManagement
+Get-PackageSource                           PackageManagement
+Get-Package                                 PackageManagement
+Get-PmemPhysicalDevice                      PersistentMemory
+Get-PmemDisk                                PersistentMemory
+Get-PmemUnusedRegion                        PersistentMemory
+Get-Certificate                             PKI
+Get-CertificateNotificationTask             PKI
+Get-CertificateEnrollmentPolicyServer       PKI
+Get-CertificateAutoEnrollmentPolicy         PKI
+Get-PfxData                                 PKI
+Get-ProcessMitigation                       ProcessMitigations
+Get-TrustedProvisioningCertificate          Provisioning
+Get-ProvisioningPackage                     Provisioning
+Get-PSReadLineKeyHandler                    PSReadline
+Get-PSReadLineOption                        PSReadline
+Get-ScheduledJobOption                      PSScheduledJob
+Get-JobTrigger                              PSScheduledJob
+Get-ScheduledJob                            PSScheduledJob
+Get-SecureBootUEFI                          SecureBoot
+Get-SecureBootPolicy                        SecureBoot
+Get-TlsCipherSuite                          TLS
+Get-TlsEccCurve                             TLS
+Get-TroubleshootingPack                     TroubleshootingPack
+Get-TpmSupportedFeature                     TrustedPlatformModule
+Get-TpmEndorsementKeyInfo                   TrustedPlatformModule
+Get-Tpm                                     TrustedPlatformModule
+Get-UevStatus                               UEV
+Get-UevTemplate                             UEV
+Get-UevConfiguration                        UEV
+Get-UevTemplateProgram                      UEV
+Get-UevAppxPackage                          UEV
+Get-WheaMemoryPolicy                        Whea
+Get-WindowsDeveloperLicense                 WindowsDeveloperLicense
+Get-WindowsErrorReporting                   WindowsErrorReporting
+Get-WindowsSearchSetting                    WindowsSearch
