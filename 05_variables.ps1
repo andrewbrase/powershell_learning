@@ -1,0 +1,1 @@
+$thisprocess = Get-Process
