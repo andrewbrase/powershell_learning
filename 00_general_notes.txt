@@ -442,3 +442,27 @@ Teams          280
 msedgewebview2 314
 chrome         325
 chrome         473
+_____________________________________________________________________________________________________________________________________________________
+PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem
+
+
+    Directory: C:\Users\brasea\Desktop\txt_notes
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          2/8/2023  10:15 AM           7272 ai.txt
+-a----         1/17/2023   9:24 PM           6844 django.txt
+-a----         2/16/2023  12:00 PM          28900 flashcards.txt
+-a----         1/18/2023  10:20 AM          20843 interview.txt
+-a----         1/24/2023   8:52 AM           2698 se1.txt
+-a----         1/17/2023   2:45 PM           2231 study_planner.txt
+-a----          2/6/2023  12:33 PM           1334 web_dev_junior_.txt
+
+
+PS C:\Users\brasea\Desktop\txt_notes> Get-ChildItem | Where-Object {$_.Length -gt 10000} | Sort-Object Name | Format-Table name,Length
+
+Name           Length
+----           ------
+flashcards.txt  28900
+interview.txt   20843
